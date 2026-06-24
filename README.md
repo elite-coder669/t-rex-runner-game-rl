@@ -10,7 +10,29 @@ A reinforcement learning agent trained to play the Chrome T-Rex Runner game auto
 
 ## How it works
 
-This project extends the open-source Chromium T-Rex Runner game with a reinforcement learning agent. The agent observes the game state (obstacle distance, speed, ground position) and learns to jump and duck at the right moments through trial and error.
+This project extends the open-source Chromium T-Rex Runner game with a reinforcement learning agent.
+
+```mermaid
+flowchart TD
+    subgraph Agent["RL Agent"]
+        A[Observe state] --> B{Jump or Duck?}
+        B --> C[Execute action]
+        C --> D[Receive reward]
+        D --> E[Update policy]
+        E --> A
+    end
+    
+    subgraph Game["Game Environment"]
+        F[T-Rex Runner] -->|distance, speed, obstacles| A
+        C -->|jump / duck| F
+        F -->|score| D
+    end
+    
+    G[Press F] --> H[Arcade Mode ON]
+    H --> Agent
+```
+
+The agent observes the game state (obstacle distance, speed, ground position) and learns to jump and duck at the right moments through trial and error.
 
 Press **F** to enable Arcade Mode, which activates the RL agent to play autonomously.
 
