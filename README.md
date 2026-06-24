@@ -1,5 +1,10 @@
 # T-Rex Runner — Reinforcement Learning Agent
 
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-yellow)
+![RL](https://img.shields.io/badge/RL-Reinforcement%20Learning-orange)
+![License](https://img.shields.io/badge/license-BSD%203--Clause-blue)
+![Status](https://img.shields.io/badge/status-active-brightgreen)
+
 A reinforcement learning agent trained to play the Chrome T-Rex Runner game autonomously. Forked from [devfolioco/t-rex-runner-game](https://github.com/devfolioco/t-rex-runner-game).
 
 ## Stack
